@@ -1,0 +1,25 @@
+# Large datasets
+candidates.jsonl
+candidates.jsonl.gz
+
+# Output submission CSV
+submission.csv
+
+# Locally organized directories (NOT to be pushed to GitHub)
+challenge_resources/
+local_scripts/
+
+# Python temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Local environments
+.venv/
+venv/
+ENV/
+env/
+
+!requirements.txt

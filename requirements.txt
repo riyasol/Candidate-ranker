@@ -1,0 +1,5 @@
+# Zero external dependencies required!
+# The ranking script runs entirely on Python's standard library (json, csv, argparse, datetime).
+# This ensures 100% reliability and maximum execution speed under the Stage 3 sandboxed Docker container.
+#
+# Minimum environment: Python 3.8+
