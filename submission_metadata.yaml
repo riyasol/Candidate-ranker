@@ -1,0 +1,63 @@
+# Filled in for candidate_ranker
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "candidate_ranker"
+
+primary_contact:
+  name: "Riya"
+  email: "riya@example.com"        # Please edit with your actual email
+  phone: "+91-9999999999"          # Please edit with your actual phone number
+
+team_members:
+  - name: "Riya"
+    email: "riya@example.com"
+    role: "ML Engineer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/riya-redrob/redrob-candidate-ranker"  # Update with your actual repo URL
+sandbox_link: "http://localhost:8000"  # Local running port, host on Streamlit Cloud/HF Spaces if required
+
+reproduce_command: "python rank_candidates.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local Windows PC"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.12.0"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Gemini"
+
+ai_usage_summary: |
+  Used Gemini to design the scoring algorithm, implement the regex-based career timeline checks, and debug standard library operations. No candidate data was sent to external LLMs during the execution of the ranker.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Multi-stage candidate ranking system. Removes 114 honeypot profiles using duration, timeline, and founding year constraints (specifically Krutrim/Sarvam AI before 2023). Applies hard disqualifications for pure research, consulting-only, and CV-only backgrounds. Remaining candidates are ranked using a Technical Fit Score (experience, vector search, retrieval, and evaluation metrics) multiplied by an engagement-based Behavioral Signal Score.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
